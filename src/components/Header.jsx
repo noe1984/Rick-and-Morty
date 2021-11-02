@@ -1,15 +1,23 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import ThemeContext from '../context/ThemeContext'
 import './styles/Header.css'
 
 export const Header = () => {
-    
+
+    const { theme, setTheme } = useContext(ThemeContext)
+    const [buttonTheme, SetButtonTheme] = useState('Button-dark')
     const [darkMode, setDarkMode] = useState(false)
-    const handleClick = () => setDarkMode(!darkMode)
+
+    const handleClick = () => {
+        setDarkMode(!darkMode)
+        theme === 'Light-mode'? setTheme('Dark-mode'): setTheme('Light-mode')
+        buttonTheme === 'Button-dark'? SetButtonTheme('Button-light') : SetButtonTheme('Button-dark')
+    }
 
     return (
         <div className='Header'>
             <h1>Rick and Morty</h1>
-            <button onClick={handleClick}>{darkMode? 'Dark Mode': 'Light Mode'}</button>
+            <button className={buttonTheme} onClick={handleClick}>{darkMode? 'Light Mode': 'Dark Mode' }</button>
         </div>
     )
 }
