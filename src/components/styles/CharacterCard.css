@@ -1,0 +1,26 @@
+.Characters-card {
+    width: 270px;
+    height: 370px;
+    background: linear-gradient(to right, #1cd8d2, #93edc7);
+    border: 3px solid black;
+    margin: 1px;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    object-fit: cover;
+}
+
+.Characters-card h3{
+    height: 45px;
+    padding-top: 5px; 
+}
+
+.Characters button{
+    height: 30px;
+    width: 130px;
+    margin-bottom: 6px;
+    padding: 5px;
+    border-radius: 15px;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: aquamarine;
+}

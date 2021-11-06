@@ -1,11 +1,16 @@
 .Characters {
     display: flex;
+    flex-direction: column;
+}
+
+.Characters-container {
+    display: flex;
     align-items: center;
     justify-content: center;
     padding-bottom: 20px;
 }
 
-.Characters-container {
+.Characters-cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1.5rem;
@@ -13,21 +18,4 @@
     align-items: center;
     justify-content: center;
     padding-top: 25px;
-}
-
-.Characters-card {
-    width: 270px;
-    height: 350px;
-    background: linear-gradient(to right, #1cd8d2, #93edc7);
-    border: 2px solid black;
-    margin: 1px;
-    border-radius: 10px;
-    overflow: hidden;
-    text-align: center;
-    object-fit: cover;
-}
-
-.Characters-card h3{
-    height: 50px;
-    padding-top: 10px;
 }

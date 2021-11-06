@@ -1,0 +1,25 @@
+.Favorite-title {
+    padding-left: 130px;
+}
+.Favorite {
+    height: 95px;
+    width: 100%;
+    max-width: 100%;
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+    padding-left: 130px;
+    padding-top: 20px;
+}
+
+.Favorite-item {
+    height: 60px;
+    margin: 2px;
+}
+
+.Favorite-item img {
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: contain;
+}

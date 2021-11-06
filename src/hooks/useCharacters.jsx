@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export const useCharacters = (url) => {
-    const [characters, setCharacters] = useState([])
+  const [characters, setCharacters] = useState([])
 
   useEffect(() => {
      fetch(url)
