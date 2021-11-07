@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react'
+import React, { useMemo, useReducer, useState } from 'react'
 import './styles/Characters.css'
 import { useCharacters } from '../hooks/useCharacters'
 import { CharacterCard } from './CharacterCard'
@@ -29,14 +29,30 @@ export const Characters = () => {
     dispatch({type: 'ADD_TO_FAVORITES', payload: favorite})
   }
 
+  const [search, setSearch] = useState('')
+  const handleSearch = (event) => {
+    setSearch(event.target.value)
+  }
+  
+  
+  const filteredCharacters = useMemo(() => 
+    characters.filter( character => {
+      return character.name.toLowerCase().includes(search.toLowerCase())
+    }),
+    [characters, search] 
+  )
+
   return (
     <div className='Characters'>
-
       <FavoriteItem favorites={favorites} />
+
+      <div className="Characters-search">
+        <input type="text" value={search} onChange={handleSearch} />
+      </div>
 
       <div  className='Characters-container'>
         <div className="Characters-cards">
-          <CharacterCard characters={characters} handleClick={handleClick} />
+          <CharacterCard characters={filteredCharacters} handleClick={handleClick} />
         </div>
       </div> 
 

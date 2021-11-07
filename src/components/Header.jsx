@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react'
 import ThemeContext from '../context/ThemeContext'
 import './styles/Header.css'
 import darkModeButton from './assets/dark.png'
-import lightModeButton from './assets/idea.png'
+import lightModeButton from './assets/light.png'
 
 export const Header = () => {
 
@@ -21,7 +21,7 @@ export const Header = () => {
             <h1>Rick and Morty</h1>
             <button className={buttonTheme} onClick={handleClick}>
                 <div className='Header-switch'>
-                    {darkMode? <img src={darkModeButton} alt="" />: <img src={lightModeButton} alt="" />}
+                    {darkMode? <img src={lightModeButton} alt="" />: <img src={darkModeButton} alt="" />}
                 </div>
             </button>
         </div>

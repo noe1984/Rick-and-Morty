@@ -1,32 +1,38 @@
 ----INITIALIZING PROYECT
-npx create-react-app
-configure custom proyect
+-npx create-react-app
+-configure custom proyect
 
 ----BASIC CONFIGURATION AND HEADER
-styles folder - Header.jsx - Header.css
-Add a title and a dark mode button, using useState to show 'Dark mode or Light-mode' inside the button, this 
+-styles folder - Header.jsx - Header.css
+-Add a title and a dark mode button, using useState to show 'Dark mode or Light-mode' inside the button, this 
     will be done by the onClick event.
 
-----LIGHT AND DARK MODE
-App.css - Add 'Light-mode' and 'Dark-mode'
-The same onClick event will pass a className property to the div wich contains the App component, this will be done
+----LIGHT AND DARK MODE, "useContext"
+-App.css - Add 'Light-mode' and 'Dark-mode'
+-The same onClick event will pass a className property to the div wich contains the App component, this will be done
     using Context of React wich will wrap the App component to be able to pass theme and setTheme to the Header 
     component which will make the change in the onClick event and store it inside the theme
 
-----FETCHING CHARACTERS
-Characters.jsx- Characters.css - useCharacters.jsx
-Use a custom hook, in this case one that contains useState and useEffect to bring all the characters from the
+----FETCHING CHARACTERS, "useState", "useEffect"
+-Characters.jsx- Characters.css - useCharacters.jsx
+-Use a custom hook, in this case one that contains useState and useEffect to bring all the characters from the
     rick and morty api 'https://rickandmortyapi.com/api/character' this custom hook has to return 'characters'.
-In Characters.jsx receive 'characters' and do a map to display the name and image of the character
+-In Characters.jsx receive 'characters' and do a map to display the name and image of the character
 
-----FAVORITES 
-In Characters.jsx 
-initialState, an objetc that contains 'favorites: []'
-After that, create the Favorites Reducer which contains the 'switch' that will add a 'payload' to the previous state
-Inside the characters function get 'favorites' and 'dispatch' from useReducer which has as parameters 'favoritesReducer'
+----FAVORITES, "useReducer"
+-In Characters.jsx 
+-initialState, an objetc that contains 'favorites: []'
+-After that, create the Favorites Reducer which contains the 'switch' that will add a 'payload' to the previous state
+-Inside the characters function get 'favorites' and 'dispatch' from useReducer which has as parameters 'favoritesReducer'
     and 'initialState'
-creating handleClick function, this function has the dispatch, inside this is the object that contains 
+-creating handleClick function, this function has the dispatch, inside this is the object that contains 
     'type' and 'payload'
-pass the above function as a parameter to the CharacterCard component
-finally make a favorites mapping and display the image of choosen favorite character.
+-pass the above function as a parameter to the CharacterCard component
+-finally make a favorites mapping and display the image of choosen favorite character.
+
+----SEARCH, "useMemo"
+-Now, 'filter' characters and verify if character.name 'includes' what is in 'search', the result of this, put it 
+    in a 'const' which will be passed as parameter to CharacterCard component instead of 'characters'
+-'filterCharacters' will be wrapped with useMemo which contains a function and as a second parameter the elements 
+    involved in memoization.
 
