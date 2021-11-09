@@ -3,11 +3,11 @@
 }
 
 .Light-mode {
-    background: linear-gradient(#dbdbdb, #eaeaea);
-    color: black;
+    background: linear-gradient(to right,#0f3443,#36d1dc, #0f3443 95%);
+    color:black;
 }
 
 .Dark-mode {
-    background: linear-gradient(#434343,#000000);
+    background: linear-gradient(to right, #232526, #434343,#434343, #232526);
     color: whitesmoke;
 }

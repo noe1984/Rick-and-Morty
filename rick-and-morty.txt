@@ -31,8 +31,16 @@
 -finally make a favorites mapping and display the image of choosen favorite character.
 
 ----SEARCH, "useMemo"
--Now, 'filter' characters and verify if character.name 'includes' what is in 'search', the result of this, put it 
+-Now 'filter' characters and verify if character.name 'includes' what is in 'search', the result of this, put it 
     in a 'const' which will be passed as parameter to CharacterCard component instead of 'characters'
 -'filterCharacters' will be wrapped with useMemo which contains a function and as a second parameter the elements 
     involved in memoization.
+
+----HandleSearch useRef, useCallback
+-Modify the way to search for characters, add a 'ref' created previously using 'useRef' in the input tag, this way
+    inside the 'HandleSearch' function 'setSearch' will set 'ref.curret.value'.
+-Modify the 'handleSearch' funtion by adding 'useCallback', passing 'setSearch' as the first parameter and [] as 
+    the second.
+-Improve the code by creating a new component called 'Search' which will recieve the following parameters: searchRef, 
+    and handleSearch.
 

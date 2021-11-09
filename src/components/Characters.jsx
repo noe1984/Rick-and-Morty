@@ -1,8 +1,9 @@
-import React, { useMemo, useReducer, useState } from 'react'
+import React, { useCallback, useMemo, useReducer, useRef, useState } from 'react'
 import './styles/Characters.css'
 import { useCharacters } from '../hooks/useCharacters'
 import { CharacterCard } from './CharacterCard'
 import { FavoriteItem } from './FavoriteItem'
+import { Search } from './Search'
 
 const URL = 'https://rickandmortyapi.com/api/character'
 
@@ -24,15 +25,16 @@ const favoritesReducer = (state, action) => {
 export const Characters = () => {
   const characters = useCharacters(URL)
   const [favorites, dispatch] = useReducer(favoritesReducer, initialState)
+  const [search, setSearch] = useState('')
+  const searchRef = useRef('')
 
   const handleClick = favorite => {
     dispatch({type: 'ADD_TO_FAVORITES', payload: favorite})
   }
 
-  const [search, setSearch] = useState('')
-  const handleSearch = (event) => {
-    setSearch(event.target.value)
-  }
+  const handleSearch = useCallback(() => {
+    setSearch(searchRef.current.value)
+  },[])
   
   
   const filteredCharacters = useMemo(() => 
@@ -46,9 +48,7 @@ export const Characters = () => {
     <div className='Characters'>
       <FavoriteItem favorites={favorites} />
 
-      <div className="Characters-search">
-        <input type="text" value={search} onChange={handleSearch} />
-      </div>
+      <Search searchRef={searchRef} handleSearch={handleSearch} />
 
       <div  className='Characters-container'>
         <div className="Characters-cards">
