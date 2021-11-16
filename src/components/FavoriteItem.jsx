@@ -4,17 +4,17 @@ import './styles/FavoriteItem.css'
 export const FavoriteItem = ({favorites}) => {
     const favs = favorites.favorites
     return (
-      <>
-      <h3 className='Favorite-title'>Add your favs here</h3>
-      <div className='Favorite'>
-        {favs.map(favorite => {
-          return (
-            <div className="Favorite-item" key={favorite.id}>
-                  <img src={favorite.image} alt="" />
-                </div>
-            )
-          })}
+      <div className='FavoriteItem'>
+        <h3 className='FavoriteItem-title'>Add your favs here</h3>
+        <div className='FavoriteItem-map'>
+          {favs.map(favorite => {
+            return (
+              <div className="FavoriteItem-detail" key={favorite.id}>
+                    <img src={favorite.image} alt="" />
+              </div>
+              )
+            })}
+        </div>
       </div>
-      </>
     )
 }

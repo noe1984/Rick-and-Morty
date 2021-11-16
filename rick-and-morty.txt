@@ -15,9 +15,9 @@
 
 ----FETCHING CHARACTERS, "useState", "useEffect"
 -Characters.jsx- Characters.css - useCharacters.jsx
--Use a custom hook, in this case one that contains useState and useEffect to bring all the characters from the
+-Create a custom hook, in this case one that contains useState and useEffect to bring all the characters from the
     rick and morty api 'https://rickandmortyapi.com/api/character' this custom hook has to return 'characters'.
--In Characters.jsx receive 'characters' and do a map to display the name and image of the character
+-In Characters.jsx receive 'characters' and make a mapping to display the name and image of each character.
 
 ----FAVORITES, "useReducer"
 -In Characters.jsx 
@@ -44,3 +44,4 @@
 -Improve the code by creating a new component called 'Search' which will recieve the following parameters: searchRef, 
     and handleSearch.
 
+----RESPONSIVE

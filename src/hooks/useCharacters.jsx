@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-export const useCharacters = (url) => {
+export const useCharacters = url => {
   const [characters, setCharacters] = useState([])
 
   useEffect(() => {
