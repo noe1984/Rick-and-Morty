@@ -14,7 +14,7 @@ export const Header = () => {
         setDarkMode(!darkMode)
         theme === 'Light-mode'? setTheme('Dark-mode'): setTheme('Light-mode')
         buttonTheme === 'Button-dark'? SetButtonTheme('Button-light') : SetButtonTheme('Button-dark')
-    }
+    } 
 
     return (
         <div className='Header'>
