@@ -15,9 +15,9 @@ export const CharacterCard = ({characters, handleClick}) => {
             <img className='Characters-img' src={character.image} alt="" />
 
             <div className='Characters-info'>
-              <p>Origin: {character.origin.name}</p>
+              <p>Origin:<br /> {character.origin.name}</p>
               <small>Gender: {character.gender}</small><br />
-              <small>Spicies: {character.species}</small><br />
+              <small>Species: {character.species}</small><br />
               <small>Location: {character.location.name}</small>
             </div>
 

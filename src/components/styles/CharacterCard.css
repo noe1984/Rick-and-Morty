@@ -1,6 +1,6 @@
 .Characters-card { 
-    width: 300px;
-    height: 370px;
+    width: 280px;
+    height: 360px;
     background: linear-gradient(to right, #1cd8d2, #93edc7);
     border: 3px solid black;
     margin: 1px;
@@ -14,23 +14,21 @@
     justify-content: space-evenly;
     align-items: center;
 }
+
 .Characters-img  {
-    width: 180px;
+    width: 152px;
     border-radius: 50%;
     position: absolute;
+    margin-bottom: 40px;
 }
 
 .Characters-card h3{
-    height: 45px;
-    padding-top: 5px; 
+    padding-bottom: 8px;
     color: black;
 }
 
 .Characters button{
-    height: 30px;
     width: 130px;
-    margin-bottom: 18px;
-    padding-top: 18px;
     padding: 5px;
     border-radius: 15px;
     background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
@@ -39,6 +37,9 @@
 
 .Characters-info {
     padding-top: 10em;
-    /* position: absolute; */
-    z-index: 2;
 }
+
+.Characters-info p {
+    font-weight: bold;
+}
+
