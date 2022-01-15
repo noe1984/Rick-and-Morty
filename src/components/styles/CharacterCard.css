@@ -1,8 +1,8 @@
 .Characters-card { 
     width: 280px;
     height: 360px;
-    background: linear-gradient(to right, #1cd8d2, #93edc7);
-    border: 3px solid black;
+    background: transparent;
+    border: 4px solid black;
     margin: 1px;
     border-radius: 10px;
     overflow: hidden;
@@ -24,7 +24,6 @@
 
 .Characters-card h3{
     padding-bottom: 8px;
-    color: black;
 }
 
 .Characters button{

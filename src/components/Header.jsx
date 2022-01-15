@@ -23,7 +23,7 @@ export const Header = () => {
                 <div className='Header-switch'>
                     {darkMode? <img src={lightModeButton} alt="" />: <img src={darkModeButton} alt="" />}
                 </div>
-            </button>
+            </button> 
         </div>
     )
 }

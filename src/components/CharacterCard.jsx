@@ -3,7 +3,7 @@ import './styles/CharacterCard.css'
 
 export const CharacterCard = ({characters, handleClick}) => {
     return characters.map(character => {
-        return (
+        return ( 
           
           <div className='Characters-card' key={character.id}>
 

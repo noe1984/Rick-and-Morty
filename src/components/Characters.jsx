@@ -37,7 +37,7 @@ export const Characters = () => {
   },[])
   
   
-  const filteredCharacters = useMemo(() => 
+  const filteredCharacters = useMemo(() =>  
     characters.filter( character => {
       return character.name.toLowerCase().includes(search.toLowerCase())
     }),
